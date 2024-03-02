@@ -1,5 +1,8 @@
 <div class="game-field">
     <div class="card-stack">
-        <img **ngFor="let c of [1,2,3,4,5]" src="/assets/img/cards/card_cover.png">
+        @for(item of [0,1,2,3,4]; track item; let i = $index) {
+            <img [ngStyle]="{'right.px': i * 50}" src="/assets/img/cards/card_cover.png">
+        }
+        
     </div>
 </div>
