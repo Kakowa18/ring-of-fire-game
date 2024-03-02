@@ -1,0 +1,29 @@
+.start-game {
+        background-color: #404040;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+
+        >img {
+                height: 90vh;
+        }
+
+        .start-game-label {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 65%;
+                display: flex;
+                justify-content: center;
+
+                >img {
+                        height: auto;
+                        width: 45vw;
+
+                        &:hover {
+                                filter: brightness(1.22);
+                                cursor: pointer;
+                        }
+                }
+        }
+}
