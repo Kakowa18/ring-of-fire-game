@@ -1,10 +1,9 @@
-import { FORMERR } from "dns";
-
 export class GameLoading {
     public players: string[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
+    public currentCard: string | undefined;
 
     constructor() {
         for(let i = 1; i < 14; i++) {
@@ -16,7 +15,6 @@ export class GameLoading {
         shuffle(this.stack);
     }
 }
-
 
 function shuffle(array: any) {
     let currendIndex = array.length, temporaryValue, randomIndex;

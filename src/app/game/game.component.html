@@ -1,3 +1,5 @@
+<app-player *ngFor="let player of gamesLoading.players" class="player-position" style="top: 80px;"></app-player>
+
 <div class="game-field">
     <div class="card-stack">
         @for(item of [0,1,2,3]; track item; let i = $index) {
@@ -5,12 +7,16 @@
         }
 
         <img (click)="takeCard()" class="top-card" style="right: 100px" src="/assets/img/cards/card_cover.png">
+        
+        <img *ngFor="let card of gamesLoading.playedCards" class="played-card" src="/assets/img/cards/{{ card }}.png"
+        alt="Played Card">
+
        
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 100px"
-            src="/assets/img/cards/ace_1.png">
+            src="/assets/img/cards/{{ currentCard }}.png">
     
 
-
+     
 
     </div>
 </div>
