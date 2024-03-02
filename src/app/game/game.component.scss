@@ -1,0 +1,18 @@
+.game-field {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url("/assets/img/board.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.card-stack {
+    img {
+        position: absolute;
+        width: 120px;
+        cursor: pointer;
+    }
+}
