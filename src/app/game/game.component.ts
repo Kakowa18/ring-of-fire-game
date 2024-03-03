@@ -69,7 +69,9 @@ export class GameComponent {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent)
 
     dialogRef.afterClosed().subscribe(name => {
-      this.gamesLoading.players.push(name);
+      if(name && name.length > 0) {
+        this.gamesLoading.players.push(name);
+      }
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {
   MatDialogTitle,
   MatDialogRef,
@@ -36,14 +36,14 @@ export interface DialogData {
 
 
 export class DialogAddPlayerComponent {
-  constructor(
-    public dialogRef: MatDialogRef<DialogAddPlayerComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
-  ) {}
+  name: string = '';
+
+  constructor(public dialogRef: MatDialogRef<DialogAddPlayerComponent>) {
+
+  }
   onNoClick(): void {
     this.dialogRef.close();
   }
-  name: string = '';
-
+  
 
 }
