@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { GameDescriptionComponent } from '../game-description/game-description.component';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @Component({
@@ -23,13 +26,15 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss',
   imports: [CommonModule, PlayerComponent, MatIconModule, MatButtonModule,
+    MatCardModule,
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
     MatDialogClose,
     FormsModule,
     MatInputModule,
-    MatFormFieldModule]
+    MatFormFieldModule,
+    GameDescriptionComponent]
 })
 export class GameComponent {
   gamesLoading: GameLoading = new GameLoading;

@@ -10,10 +10,13 @@
         margin-left: 16px;
     }
 
-    background-color: #673AB7;
+    background-color: grey;
     >img {
         object-fit: cover;
         border-radius: 100%;
     }
 }
 
+.player-active {
+    background-color: #673AB7 !important;  
+}
