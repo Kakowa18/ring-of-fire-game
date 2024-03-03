@@ -60,8 +60,8 @@ export class GameComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent)
 
-    dialogRef.afterClosed().subscribe(result => {
-
+    dialogRef.afterClosed().subscribe(name => {
+      this.gamesLoading.players.push(name);
     });
   }
 
