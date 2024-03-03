@@ -55,6 +55,9 @@ export class GameComponent {
       this.gamesLoading.currentCard = this.currentCard;
       this.pickCardAnimation = true;
 
+      this.gamesLoading.currentPlayer++;
+      this.gamesLoading.currentPlayer = this.gamesLoading.currentPlayer % this.gamesLoading.players.length; 
+
       setTimeout(() => {
         this.gamesLoading.playedCards.push(this.currentCard);
         this.pickCardAnimation = false;
