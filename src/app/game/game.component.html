@@ -4,21 +4,17 @@
 <div class="game-field">
     <div class="card-stack">
         @for(item of [0,1,2,3]; track item; let i = $index) {
-        <img [ngStyle]="{'right.px': i * 25}" src="/assets/img/cards/card_cover.png">
+        <img [ngStyle]="{'right.px': i * 25}" src="assets/img/cards/card_cover.png">
         }
 
-        <img (click)="takeCard()" class="top-card" style="right: 100px" src="/assets/img/cards/card_cover.png">
+        <img (click)="takeCard()" class="top-card" style="right: 100px" src="assets/img/cards/card_cover.png">
 
-        <img *ngFor="let card of gamesLoading.playedCards" class="played-card" src="/assets/img/cards/{{ card }}.png"
+        <img *ngFor="let card of gamesLoading.playedCards" class="played-card" src="assets/img/cards/{{ card }}.png"
             alt="Played Card">
 
 
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 100px"
-            src="/assets/img/cards/{{ currentCard }}.png">
-
-
-
-
+            src="assets/img/cards/{{ currentCard }}.png">
     </div>
 </div>
 
